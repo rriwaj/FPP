@@ -1,4 +1,4 @@
-package assignment;
+package one;
 
 public class DemoCabinRental {
 	public static void main(String[] args) {
@@ -18,3 +18,8 @@ public class DemoCabinRental {
 						cabinNumber, weeklyRentalRate);
 	}
 }
+/* OUTPUT
+ * =======================================================================
+ * Cabin Rental weekly rental rate of cabin number 1 is 950.00 Holiday Cabin
+ * Rental weekly rental rate of cabin number 1 is 1100.00
+ */

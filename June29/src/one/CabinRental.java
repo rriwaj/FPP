@@ -1,4 +1,4 @@
-package assignment;
+package one;
 
 public class CabinRental {
 
