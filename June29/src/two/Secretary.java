@@ -1,10 +1,12 @@
 package two;
 
+import java.util.Date;
+
 public class Secretary extends DeptEmployee {
 	private double overtimeHours;
 
-	public Secretary(double salary) {
-		super(salary);
+	public Secretary(String name, double salary, Date hireDate) {
+		super(name, salary, hireDate);
 	}
 
 	public double getOvertimeHours() {

@@ -6,34 +6,23 @@ public class Main {
 	static GregorianCalendar cal;
 
 	public static void main(String[] args) {
-		Professor p1 = new Professor(1000);
 		cal = new GregorianCalendar(2015, 2, 22);
-		p1.name = "Steve Jobs";
-		p1.hireDate = cal.getTime();
+		Professor p1 = new Professor("Steve Jobs", 1000, cal.getTime());
 		p1.setNumberOfPublications(10);
 
-		Professor p2 = new Professor(2000);
-		p2.name = "Dwyane Johnson";
-		p2.setNumberOfPublications(10);
 		cal = new GregorianCalendar(2014, 3, 24);
-		p2.hireDate = cal.getTime();
+		Professor p2 = new Professor("Dwyane Johnson", 2000, cal.getTime());
+		p2.setNumberOfPublications(10);
 
-		Professor p3 = new Professor(3000);
-		p3.name = "Tom Hanks";
-		p3.setNumberOfPublications(10);
 		cal = new GregorianCalendar(2013, 1, 13);
-		p3.hireDate = cal.getTime();
+		Professor p3 = new Professor("Tom Hanks", 3000, cal.getTime());
 
-		Secretary s1 = new Secretary(100);
-		s1.name = "Apil Tiwari";
 		cal = new GregorianCalendar(2015, 3, 20);
-		s1.hireDate = cal.getTime();
+		Secretary s1 = new Secretary("Apil Tiwari", 100, cal.getTime());
 		s1.setOvertimeHours(200);
 
-		Secretary s2 = new Secretary(200);
-		s2.name = "Bibek Karki";
 		cal = new GregorianCalendar(2013, 3, 20);
-		s2.hireDate = cal.getTime();
+		Secretary s2 = new Secretary("Bibek Karki", 200, cal.getTime());
 		s2.setOvertimeHours(200);
 
 		DeptEmployee[] department = new DeptEmployee[5];
@@ -59,6 +48,6 @@ public class Main {
 }
 /*
  * OUTPUT ==================================================================
- * Print sum of all salaries in the department. y 
+ * Print sum of all salaries in the department. y
  * Sum of all salaries in department = 11100.00
  */

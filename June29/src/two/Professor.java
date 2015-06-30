@@ -1,10 +1,12 @@
 package two;
 
+import java.util.*;
+
 public class Professor extends DeptEmployee {
 	private int numberOfPublications;
 
-	public Professor(double salary) {
-		super(salary);
+	public Professor(String name, double salary, Date hireDate) {
+		super(name, salary, hireDate);
 	}
 
 	public int getNumberOfPublications() {

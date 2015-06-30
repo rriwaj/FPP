@@ -7,9 +7,10 @@ public class DeptEmployee {
 	private double salary;
 	Date hireDate;
 
-	
-	public DeptEmployee(double salary) {
+	public DeptEmployee(String name, double salary, Date hireDate) {
+		this.name = name;
 		this.salary = salary;
+		this.hireDate = hireDate;
 	}
 
 	public String getName() {
