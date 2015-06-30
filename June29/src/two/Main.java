@@ -57,8 +57,8 @@ public class Main {
 		}
 	}
 }
-/* OUTPUT
- * ================================================================== 
- * Print sum of all salaries in the department. y Sum of all salaries in
- * department = 11100.00
+/*
+ * OUTPUT ==================================================================
+ * Print sum of all salaries in the department. y 
+ * Sum of all salaries in department = 11100.00
  */
