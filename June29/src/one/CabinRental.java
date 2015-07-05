@@ -4,7 +4,7 @@ public class CabinRental {
 
 	private int cabinNumber;
 	double weeklyRentalRate;
-
+	protected String protText;
 	public CabinRental(int cabinNumber) {
 		this.cabinNumber = cabinNumber;
 		if (this.cabinNumber >= 1 && this.cabinNumber <= 3) {
