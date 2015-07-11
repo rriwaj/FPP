@@ -59,3 +59,46 @@ public class Main {
 		System.out.println("\nData at index 3: " + data);
 	}
 }
+// OUTPUT
+// ==========================================================
+// Empty Linked List
+// Size of Linked list is: 0
+//
+// After adding D at last
+// D
+//
+// After adding A at first
+// A => D
+//
+// After adding B at index 1
+// A => B => D
+//
+// After adding C at index 2
+// A => B => C => D
+//
+// After adding 3 at index 1
+// A => 3 => B => C => D
+//
+// After adding 65 at index 2
+// A => 3 => 65 => B => C => D
+//
+// After adding 13 at first
+// 13 => A => 3 => 65 => B => C => D
+//
+// After adding 27 at last
+// 13 => A => 3 => 65 => B => C => D => 27
+//
+// After removing 13 from first
+// A => 3 => 65 => B => C => D => 27
+//
+// After removing 27 from last
+// A => 3 => 65 => B => C => D
+//
+// After removing 65 from 2 index
+// A => 3 => B => C => D
+//
+// After removing 3 from list
+// A => B => C => D
+//
+// Data at index 3: D
+
