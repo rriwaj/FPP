@@ -78,6 +78,7 @@ public class MyStringLinkedList {
 			n.previous = newNode;
 		}
 		size++;
+
 	}
 
 	public Node findLast() {
@@ -183,7 +184,48 @@ public class MyStringLinkedList {
 			return value;
 		}
 	}
+	public Object getFirst() {
+		if (header == null) {
+			throw new RuntimeException("Empty Linked List");
+		} else {
+			return header;
+		}
+	}
 
+	public Object getLast() {
+		if (header == null) {
+			throw new RuntimeException("Empty Linked List");
+		} else {
+			Node node = header;
+			while (node.next != null) {
+				node = node.next;
+			}
+			return node;
+		}
+	}
+
+	public void removeFirst() {
+		if (header == null) {
+			throw new RuntimeException("Empty Linked List");
+		} else {
+			header.next.previous = null;
+			header = header.next;
+			size--;
+		}
+	}
+
+	public void removeLast() {
+		if (header == null) {
+			throw new RuntimeException("Empty Linked List");
+		} else {
+			Node node = header;
+			while (node.next != null) {
+				node = node.next;
+			}
+			node.previous.next = null;
+			size--;
+		}
+	}
 	public static void main(String[] args) {
 		MyStringLinkedList mySL = new MyStringLinkedList();
 		System.out.println(mySL);
@@ -258,47 +300,94 @@ public class MyStringLinkedList {
 		System.out.println(mySL);
 		mySL.printReverse();
 	}
-
-	public Object getFirst() {
-		if (header == null) {
-			throw new RuntimeException("Empty Linked List");
-		} else {
-			return header;
-		}
-	}
-
-	public Object getLast() {
-		if (header == null) {
-			throw new RuntimeException("Empty Linked List");
-		} else {
-			Node node = header;
-			while (node.next != null) {
-				node = node.next;
-			}
-			return node;
-		}
-	}
-
-	public void removeFirst() {
-		if (header == null) {
-			throw new RuntimeException("Empty Linked List");
-		} else {
-			header.next.previous = null;
-			header = header.next;
-			size--;
-		}
-	}
-
-	public void removeLast() {
-		if (header == null) {
-			throw new RuntimeException("Empty Linked List");
-		} else {
-			Node node = header;
-			while (node.next != null) {
-				node = node.next;
-			}
-			node.previous.next = null;
-			size--;
-		}
-	}
 }
+
+// OUTPUT
+// ====================================================================================
+// -->[NULL]
+// ==>[NULL]
+// Size of list is: 0
+//
+// -->[Carrot Cake]-->[NULL]
+// ==>[Carrot Cake]==>[NULL]
+// Size of list is: 1
+//
+// -->[Blueberry Muffin]-->[Carrot Cake]-->[NULL]
+// ==>[Carrot Cake]==>[Blueberry Muffin]==>[NULL]
+// Size of list is: 2
+//
+// -->[Apple Pie]-->[Blueberry Muffin]-->[Carrot Cake]-->[NULL]
+// ==>[Carrot Cake]==>[Blueberry Muffin]==>[Apple Pie]==>[NULL]
+// Size of list is: 3
+//
+// -->[Apple Pie]-->[Blueberry Muffin]-->[Carrot Cake]-->[Orange Juice]-->[NULL]
+// ==>[Orange Juice]==>[Carrot Cake]==>[Blueberry Muffin]==>[Apple Pie]==>[NULL]
+// Size of list is: 4
+//
+// -->[Apple Pie]-->[Blueberry Muffin]-->[Carrot Cake]-->[Orange Juice]-->[Peach
+// Sauce]-->[NULL]
+// ==>[Peach Sauce]==>[Orange Juice]==>[Carrot Cake]==>[Blueberry
+// Muffin]==>[Apple Pie]==>[NULL]
+// Size of list is: 5
+//
+// I am here 2
+// -->[Blueberry Muffin]-->[Carrot Cake]-->[Orange Juice]-->[Peach
+// Sauce]-->[NULL]
+// ==>[Peach Sauce]==>[Orange Juice]==>[Carrot Cake]==>[Blueberry
+// Muffin]==>[NULL]
+// Size of list is: 4
+//
+// I am here 3
+// -->[Blueberry Muffin]-->[Carrot Cake]-->[Orange Juice]-->[NULL]
+// ==>[Orange Juice]==>[Carrot Cake]==>[Blueberry Muffin]==>[NULL]
+// Size of list is: 3
+//
+// I am here 4
+// -->[Blueberry Muffin]-->[Orange Juice]-->[NULL]
+// ==>[Orange Juice]==>[Blueberry Muffin]==>[NULL]
+// Size of list is: 2
+//
+// -->[Blueberry Muffin]-->[Carrot Cake]-->[Orange Juice]-->[NULL]
+// ==>[Orange Juice]==>[Carrot Cake]==>[Blueberry Muffin]==>[NULL]
+// Size of list is: 3
+//
+// -->[Apple Pie]-->[Blueberry Muffin]-->[Carrot Cake]-->[Orange Juice]-->[NULL]
+// ==>[Orange Juice]==>[Carrot Cake]==>[Blueberry Muffin]==>[Apple Pie]==>[NULL]
+// Size of list is: 4
+//
+// -->[Apple Pie]-->[Blueberry Muffin]-->[Carrot Cake]-->[Danish
+// Delight]-->[Orange Juice]-->[NULL]
+// ==>[Orange Juice]==>[Danish Delight]==>[Carrot Cake]==>[Blueberry
+// Muffin]==>[Apple Pie]==>[NULL]
+// Size of list is: 5
+//
+// -->[Apple Pie]-->[Blueberry Muffin]-->[Carrot Cake]-->[Danish
+// Delight]-->[Mango Smoothie]-->[Orange Juice]-->[NULL]
+// ==>[Orange Juice]==>[Mango Smoothie]==>[Danish Delight]==>[Carrot
+// Cake]==>[Blueberry Muffin]==>[Apple Pie]==>[NULL]
+// Size of list is: 6
+//
+// -->[Apple Pie]-->[Blueberry Muffin]-->[Carrot Cake]-->[Danish
+// Delight]-->[Mango Smoothie]-->[Orange Juice]-->[Peach Sauce]-->[NULL]
+// ==>[Peach Sauce]==>[Orange Juice]==>[Mango Smoothie]==>[Danish
+// Delight]==>[Carrot Cake]==>[Blueberry Muffin]==>[Apple Pie]==>[NULL]
+// Size of list is: 7
+//
+// First element of list is: Apple Pie
+//
+// Last element of list is: Peach Sauce
+//
+// After removing first element
+// -->[Blueberry Muffin]-->[Carrot Cake]-->[Danish Delight]-->[Mango
+// Smoothie]-->[Orange Juice]-->[Peach Sauce]-->[NULL]
+// ==>[Peach Sauce]==>[Orange Juice]==>[Mango Smoothie]==>[Danish
+// Delight]==>[Carrot Cake]==>[Blueberry Muffin]==>[NULL]
+// After removing last element
+// -->[Blueberry Muffin]-->[Carrot Cake]-->[Danish Delight]-->[Mango
+// Smoothie]-->[Orange Juice]-->[NULL]
+// ==>[Orange Juice]==>[Mango Smoothie]==>[Danish Delight]==>[Carrot
+// Cake]==>[Blueberry Muffin]==>[NULL]
+// Size of list is: 5
+//
+// -->[NULL]
+// ==>[NULL]
