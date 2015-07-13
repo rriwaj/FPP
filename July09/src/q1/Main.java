@@ -27,6 +27,19 @@ public class Main {
 		q1.insert("E");
 		System.out.println("Next item in queue is: " + q1.peek());
 		System.out.println(q1.displayAll());
-		
+
 	}
 }
+// OUTPUT
+// ==============================
+// Size of queue is: 3
+// Next item in queue is: A
+// A B C
+// Next item in queue is: B
+// B C
+// Next item in queue is: C
+// C
+// Next item in queue is: null
+//
+// Next item in queue is: D
+// D E

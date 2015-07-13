@@ -58,3 +58,13 @@ public class PQueue {
 		return current.data;
 	}
 }
+
+// OUTPUT
+// =================================
+// 19
+// 19 => 33
+// 1 => 19 => 33
+// 1 => 3 => 19 => 33
+// Next item in queue is:1
+// 3 => 19 => 33
+
