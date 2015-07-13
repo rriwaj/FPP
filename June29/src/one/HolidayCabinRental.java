@@ -6,5 +6,6 @@ public class HolidayCabinRental extends CabinRental {
 		super(cabinNumber);
 		// add 150 to regular weekly rental rate in summer
 		weeklyRentalRate = super.getWeeklyRentalRate() + 150;
+		
 	}
 }
